@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
+/*
+ * monis.rent — editorial showroom palette (DESIGN.md).
+ * Bone paper ground, near-black ink, one vermilion accent.
+ * accent-deep exists because white on #FF4D14 fails AA at text sizes;
+ * anything carrying text uses accent-deep.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bone: #f4f1ea;
+  --ink: #1c1917;
+  --ink-soft: #57534e;
+  --accent: #ff4d14;
+  --accent-deep: #b93a0a;
+  --line: #d9d3c6;
+  /* Category tiles (noho-style saturated blocks behind product shots). */
+  --tile-desk: #ff4d14;
+  --tile-chair: #2f45ff;
+  --tile-monitor: #0e9f8a;
+  --tile-lamp: #f5a524;
+  --tile-accessory: #6b7f3e;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-bone: var(--bone);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-line: var(--line);
+  --color-tile-desk: var(--tile-desk);
+  --color-tile-chair: var(--tile-chair);
+  --color-tile-monitor: var(--tile-monitor);
+  --color-tile-lamp: var(--tile-lamp);
+  --color-tile-accessory: var(--tile-accessory);
+  --font-display: var(--font-newsreader);
+  --font-sans: var(--font-schibsted);
+  --font-mono: var(--font-plex-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bone);
+  color: var(--ink);
+  font-family: var(--font-schibsted), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Paper grain over everything — the editorial texture layer. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* The one orchestrated page-load reveal — poster type and the hint pill. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-rise {
+  animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
