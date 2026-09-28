@@ -1,0 +1,8 @@
+The Challenge
+One of our real clients, monis.rent, rents out office equipment — desks, chairs, monitors, and everything else you need for a workspace — to digital nomads and startups in Bali. Instead of buying furniture, you rent a fully equipped office setup for as long as you need it.
+
+They've asked us to build an interactive tool where people can design their dream workspace and then rent it. But here's the thing: the user doesn't want to just click through a boring product catalog. They want a cool, visual, fun experience — pick a desk, choose a chair, throw on some monitors, add a lamp, maybe a plant — and actually see their setup come to life. Then hit "Rent" when they're happy with it.
+
+Think about this from the user's perspective: a freelance developer just landed in Bali and needs a workspace by next week. They don't want to scroll through a spreadsheet of products. They want to build their perfect office visually, get excited about it, and hit a button to make it happen.
+
+We've attached a rough sketch below to give you an idea of the direction. But please interpret it any way you want. Build it differently. Make it better. Surprise us. Feel free to use images from the monis.rent website, or create your own.

@@ -1,0 +1,10 @@
+Required
+Next.js — as the framework
+
+Required
+Tailwind CSS — for styling
+
+Required
+Vercel — for deployment
+
+Everything else is up to you. State management, animation libraries, drag & drop, UI component kits — your call. Use whatever helps you build the best result.

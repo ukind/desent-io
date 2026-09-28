@@ -1,0 +1,12 @@
+Must-Haves
+Your submission needs to cover these. Everything else is up to you.
+
+A user can select a desk from at least 2 options
+
+A user can select a chair from at least 2 options
+
+A user can add accessories to the workspace (monitors, lamps, plants, etc.)
+
+The workspace preview updates visually as items are added or changed
+
+There is a summary or "checkout" view showing the selected setup
